@@ -1,0 +1,16 @@
+{
+    "name": "tic-tac-toe-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "author": "me",
+    "license": "ISC",
+    "dependencies": {
+        "http": "^0.0.1-security",
+        "nodemon": "^3.1.4",
+        "socket.io": "^4.7.5"
+    }
+}

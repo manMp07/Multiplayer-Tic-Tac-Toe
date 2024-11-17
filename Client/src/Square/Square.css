@@ -1,0 +1,22 @@
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: #4b495f;
+    border-radius: 5px;
+}
+
+.square:hover {
+    cursor: pointer;
+}
+
+.not-allowed {
+    cursor: not-allowed !important;
+}
+
+.player-won {
+    background-color: #dd7f9f;
+}
+
+.red-background {
+    background-color: rgb(254, 36, 36) !important;
+}

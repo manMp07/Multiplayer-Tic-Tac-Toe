@@ -11,6 +11,7 @@ const renderFrom = [
 ];
 
 const App = () => {
+    const ORIGIN = "http://192.168.29.180:3000";
     const [gameState, setGameState] = useState(renderFrom);
     const [currentPlayer, setCurrentPlayer] = useState("circle");
     const [finishedState, setFinishetState] = useState(false);
@@ -131,7 +132,7 @@ const App = () => {
         const username = result.value;
         setPlayerName(username);
 
-        const newSocket = io("http://localhost:3000", {
+        const newSocket = io(`${ORIGIN}`, {
             autoConnect: true,
         });
 

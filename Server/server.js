@@ -4,7 +4,7 @@ const { Server } = require("socket.io");
 const httpServer = createServer();
 const io = new Server(httpServer, {
     cors: {
-        origin: "*"
+        origin: "http://192.168.29.180:5173" // should be same as ORIGIN in App.jsx
     }
 });
 

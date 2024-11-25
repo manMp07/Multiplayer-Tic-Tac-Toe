@@ -1,10 +1,13 @@
 const { createServer } = require("http");
 const { Server } = require("socket.io");
 
+const serverIP = '192.168.29.180';
+const serverPort = 8080;
+
 const httpServer = createServer();
 const io = new Server(httpServer, {
     cors: {
-        origin: "http://192.168.29.180:5173" // should be same as ORIGIN in App.jsx
+        origin: "http://192.168.29.180:5173" // URL where the frontend is running.
     }
 });
 
@@ -84,6 +87,6 @@ io.on("connection", (socket) => {
     });
 });
 
-httpServer.listen(3000, '0.0.0.0', () => {
-    console.log('Server is listening on 3000')
+httpServer.listen(serverPort, serverIP, () => {
+    console.log(`Server is listening on ${serverPort}`)
 });

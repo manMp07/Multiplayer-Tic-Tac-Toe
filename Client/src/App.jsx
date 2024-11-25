@@ -4,6 +4,9 @@ import Square from "./Square/Square";
 import { io } from "socket.io-client";
 import Swal from "sweetalert2";
 
+const serverIP = '192.168.29.180';
+const serverPort = 8080;
+
 const renderFrom = [
     [1, 2, 3],
     [4, 5, 6],
@@ -11,7 +14,7 @@ const renderFrom = [
 ];
 
 const App = () => {
-    const ORIGIN = "http://192.168.29.180:3000";
+    const ORIGIN = `http://${serverIP}:${serverPort}`;
     const [gameState, setGameState] = useState(renderFrom);
     const [currentPlayer, setCurrentPlayer] = useState("circle");
     const [finishedState, setFinishetState] = useState(false);

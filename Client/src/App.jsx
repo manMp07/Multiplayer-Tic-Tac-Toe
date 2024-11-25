@@ -4,7 +4,7 @@ import Square from "./Square/Square";
 import { io } from "socket.io-client";
 import Swal from "sweetalert2";
 
-const serverIP = '192.168.29.180';
+const serverIP = '192.168.30.105';
 const serverPort = 8080;
 
 const renderFrom = [
@@ -191,7 +191,7 @@ const App = () => {
                 <h1 className="game-heading water-background text-5xl font-bold text-yellow-400">
                     Tic Tac Toe
                 </h1>
-                <div className="square-wrapper m-7">
+                <div className="square-wrapper m-6">
                     {gameState.map((arr, rowIndex) =>
                         arr.map((e, colIndex) => {
                             return (
@@ -230,6 +230,19 @@ const App = () => {
                         </h3>
                     )}
             </div>
+
+            {!finishedState && playingAs === currentPlayer && (
+                <h2 className="text-center text-2xl text-yellow-400 mb-5">
+                    Your Turn
+                </h2>
+            )}
+
+            
+            {!finishedState && playingAs !== currentPlayer && (
+                <h2 className="text-center text-2xl text-yellow-400 mb-5">
+                    Opponent's Turn
+                </h2>
+            )}
 
             {!finishedState && opponentName && (
                 <h2 className="text-center text-3xl text-yellow-100">

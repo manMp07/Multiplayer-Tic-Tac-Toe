@@ -1,13 +1,13 @@
 const { createServer } = require("http");
 const { Server } = require("socket.io");
 
-const serverIP = '192.168.29.180';
+const serverIP = '192.168.30.105';
 const serverPort = 8080;
 
 const httpServer = createServer();
 const io = new Server(httpServer, {
     cors: {
-        origin: "http://192.168.29.180:5173" // URL where the frontend is running.
+        origin: `http://${serverIP}:5173` // URL where the frontend is running.
     }
 });
 
